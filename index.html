@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive SaaS pricing cards with monthly and yearly billing.">
+  <title>Plans & Pricing | Nova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="nav">
+      <a class="logo" href="#" aria-label="Nova home"><span class="logo-mark">N</span> nova</a>
+      <span class="nav-note">Simple plans. Serious progress.</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">PRICING THAT SCALES WITH YOU</p>
+      <h1>Choose the plan that<br><span>moves you forward.</span></h1>
+      <p class="subtitle">Everything you need to do your best work, at every stage.</p>
+
+      <div class="billing-control" aria-label="Billing period">
+        <span id="monthly-label" class="billing-label selected">Monthly</span>
+        <button id="billing-toggle" class="switch" type="button" role="switch"
+          aria-checked="false" aria-label="Toggle yearly billing">
+          <span class="switch-knob"></span>
+        </button>
+        <span id="yearly-label" class="billing-label">Yearly</span>
+        <span class="save-pill">SAVE 20%</span>
+      </div>
+    </section>
+
+    <section class="pricing-grid" aria-label="Pricing plans">
+      <article class="price-card">
+        <div class="plan-top">
+          <div class="plan-icon starter-icon">✦</div>
+          <p class="plan-name">STARTER</p>
+          <h2>For getting started</h2>
+          <p class="plan-description">The essentials to bring your ideas to life.</p>
+        </div>
+        <div class="price-line">
+          <span class="currency">$</span><span class="price" data-monthly="0" data-yearly="0">0</span>
+          <span class="period">/ month</span>
+        </div>
+        <p class="billing-caption">Free forever</p>
+        <a class="plan-button secondary-button" href="mailto:hello@example.com?subject=Starter%20plan">Get started <span>→</span></a>
+        <div class="features">
+          <p class="features-title">WHAT'S INCLUDED</p>
+          <ul>
+            <li><span>✓</span> Up to 3 active projects</li>
+            <li><span>✓</span> Basic analytics</li>
+            <li><span>✓</span> 1 team member</li>
+            <li><span>✓</span> Community support</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="price-card popular-card">
+        <div class="popular-ribbon">MOST POPULAR</div>
+        <div class="plan-top">
+          <div class="plan-icon pro-icon">✧</div>
+          <p class="plan-name">PRO</p>
+          <h2>For growing teams</h2>
+          <p class="plan-description">More power and flexibility for your workflow.</p>
+        </div>
+        <div class="price-line">
+          <span class="currency">$</span><span class="price" data-monthly="19" data-yearly="15">19</span>
+          <span class="period">/ month</span>
+        </div>
+        <p class="billing-caption" data-monthly-caption="Billed monthly" data-yearly-caption="Billed annually · $180 total">Billed monthly</p>
+        <a class="plan-button primary-button" href="mailto:hello@example.com?subject=Pro%20plan">Start free trial <span>→</span></a>
+        <div class="features">
+          <p class="features-title">EVERYTHING IN STARTER, PLUS</p>
+          <ul>
+            <li><span>✓</span> Unlimited projects</li>
+            <li><span>✓</span> Advanced analytics</li>
+            <li><span>✓</span> Up to 10 team members</li>
+            <li><span>✓</span> Priority email support</li>
+            <li><span>✓</span> Custom integrations</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="price-card">
+        <div class="plan-top">
+          <div class="plan-icon business-icon">◇</div>
+          <p class="plan-name">BUSINESS</p>
+          <h2>For ambitious businesses</h2>
+          <p class="plan-description">Advanced tools for teams ready to scale.</p>
+        </div>
+        <div class="price-line">
+          <span class="currency">$</span><span class="price" data-monthly="49" data-yearly="39">49</span>
+          <span class="period">/ month</span>
+        </div>
+        <p class="billing-caption" data-monthly-caption="Billed monthly" data-yearly-caption="Billed annually · $468 total">Billed monthly</p>
+        <a class="plan-button secondary-button" href="mailto:hello@example.com?subject=Business%20plan">Contact sales <span>→</span></a>
+        <div class="features">
+          <p class="features-title">EVERYTHING IN PRO, PLUS</p>
+          <ul>
+            <li><span>✓</span> Unlimited team members</li>
+            <li><span>✓</span> Dedicated account manager</li>
+            <li><span>✓</span> Advanced permissions</li>
+            <li><span>✓</span> 24/7 priority support</li>
+            <li><span>✓</span> Custom onboarding</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <p class="fine-print">All plans include secure cloud storage and regular product updates. No hidden fees.</p>
+    <footer class="footer"><span>© 2026 Nova. All rights reserved.</span><span>Built for better work.</span></footer>
+  </main>
+</body>
+</html>

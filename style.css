@@ -1,0 +1,84 @@
+:root {
+  --navy: #102b4c;
+  --blue: #2864e8;
+  --blue-dark: #1d4fc1;
+  --ink: #19263b;
+  --muted: #77859b;
+  --line: #e6ebf3;
+  --soft: #f4f7fc;
+  --white: #fff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  background: radial-gradient(circle at 50% 0%, rgba(76,132,240,.12), transparent 32rem), #f7f9fd;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+.page { width: min(1100px, calc(100% - 40px)); margin: auto; }
+.nav { height: 76px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e8edf5; }
+.logo { display: flex; align-items: center; gap: 9px; font: 800 1.15rem "Manrope", sans-serif; letter-spacing: -.05em; color: var(--navy); }
+.logo-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; color: #fff; background: var(--blue); font-size: .9rem; }
+.nav-note { color: var(--muted); font-size: .78rem; }
+.hero { text-align: center; padding: 58px 0 38px; }
+.eyebrow { margin: 0 0 12px; color: var(--blue); font-size: .68rem; font-weight: 800; letter-spacing: .17em; }
+h1, h2 { font-family: "Manrope", sans-serif; }
+h1 { margin: 0; color: var(--navy); font-size: clamp(2.35rem, 5vw, 3.7rem); line-height: 1.12; letter-spacing: -.065em; }
+h1 span { color: var(--blue); }
+.subtitle { margin: 15px 0 23px; color: var(--muted); font-size: .95rem; }
+.billing-control { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.billing-label { color: #99a4b5; font-size: .82rem; font-weight: 700; }
+.billing-label.selected { color: var(--navy); }
+.switch { width: 47px; height: 26px; border: 0; border-radius: 20px; padding: 3px; background: #d5deed; transition: background .2s; }
+.switch[aria-checked="true"] { background: var(--blue); }
+.switch-knob { display: block; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: 0 1px 4px #102b4c30; transition: transform .2s; }
+.switch[aria-checked="true"] .switch-knob { transform: translateX(21px); }
+.save-pill { padding: 4px 8px; border-radius: 5px; color: #16845b; background: #e5f7ef; font-size: .61rem; font-weight: 800; letter-spacing: .06em; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+.price-card { position: relative; display: flex; flex-direction: column; min-width: 0; padding: 27px 25px 25px; background: var(--white); border: 1px solid var(--line); border-radius: 15px; box-shadow: 0 12px 35px rgba(31,56,95,.055); transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+.price-card:hover { transform: translateY(-7px); border-color: #b8cbf5; box-shadow: 0 20px 42px rgba(31,72,145,.12); }
+.popular-card { border: 1.5px solid #7da4f8; box-shadow: 0 15px 38px rgba(40,100,232,.12); }
+.popular-card:hover { border-color: var(--blue); }
+.popular-ribbon { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); padding: 5px 13px; white-space: nowrap; border-radius: 5px; background: var(--blue); color: white; font-size: .6rem; font-weight: 800; letter-spacing: .1em; }
+.plan-icon { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; font-size: 1.25rem; margin-bottom: 17px; }
+.starter-icon { color: #697c9a; background: #eff3f9; }
+.pro-icon { color: #fff; background: linear-gradient(135deg, #4d85fa, #2457cf); }
+.business-icon { color: #8a65d4; background: #f2edfc; }
+.plan-name { margin: 0 0 4px; color: var(--blue); font-size: .65rem; font-weight: 800; letter-spacing: .15em; }
+h2 { margin: 0; color: var(--navy); font-size: 1.18rem; letter-spacing: -.04em; }
+.plan-description { min-height: 42px; margin: 8px 0 21px; color: var(--muted); font-size: .79rem; }
+.price-line { display: flex; align-items: baseline; gap: 2px; color: var(--navy); }
+.currency { font-size: 1.15rem; font-weight: 700; }
+.price { font: 800 2.8rem "Manrope", sans-serif; letter-spacing: -.07em; line-height: 1.15; }
+.period { margin-left: 4px; color: var(--muted); font-size: .75rem; }
+.billing-caption { min-height: 20px; margin: 5px 0 18px; color: #9aa5b5; font-size: .69rem; }
+.plan-button { display: flex; align-items: center; justify-content: center; gap: 13px; min-height: 45px; border-radius: 8px; font-size: .79rem; font-weight: 700; transition: background .2s, color .2s, transform .2s; }
+.plan-button:hover { transform: translateY(-2px); }
+.plan-button span { font-size: 1.1rem; }
+.secondary-button { color: var(--navy); border: 1px solid #dce4f0; background: #fff; }
+.secondary-button:hover { color: var(--blue); border-color: #a9c1f5; background: #f8faff; }
+.primary-button { color: #fff; background: var(--blue); box-shadow: 0 7px 15px rgba(40,100,232,.2); }
+.primary-button:hover { background: var(--blue-dark); }
+.features { margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--line); }
+.features-title { margin: 0 0 13px; color: #98a4b6; font-size: .59rem; font-weight: 800; letter-spacing: .13em; }
+.features ul { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.features li { display: flex; gap: 9px; color: #59677c; font-size: .75rem; }
+.features li span { color: #22a273; font-weight: 800; }
+.fine-print { margin: 24px 0 0; text-align: center; color: #929eb0; font-size: .7rem; }
+.footer { display: flex; justify-content: space-between; gap: 12px; padding: 26px 0 30px; margin-top: 16px; border-top: 1px solid #e8edf5; color: #9aa5b5; font-size: .68rem; }
+button:focus-visible, a:focus-visible { outline: 3px solid #9bbaff; outline-offset: 3px; }
+@media (max-width: 850px) { .pricing-grid { grid-template-columns: 1fr 1fr; max-width: 700px; margin: auto; } .popular-card { grid-row: 1; grid-column: 1 / -1; } }
+@media (max-width: 560px) {
+  .page { width: min(100% - 28px, 420px); }
+  .nav { height: 65px; }
+  .nav-note { font-size: .67rem; }
+  .hero { padding: 43px 0 32px; }
+  .pricing-grid { grid-template-columns: 1fr; gap: 20px; max-width: 390px; }
+  .popular-card { grid-row: auto; grid-column: auto; }
+  .price-card { padding: 25px 23px; }
+  .footer { flex-direction: column; gap: 5px; }
+}
